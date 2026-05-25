@@ -87,3 +87,11 @@ Optional visualizer profile:
 ```bash
 docker compose --profile visualizer up --build
 ```
+
+## 5. E2E Run Results (2 Videos)
+
+| Video | Frames processed | Unique people | Unique cars |
+| --- | ---: | ---: | ---: |
+| `example.mp4` | 144 | 31 | 8 |
+| `example_3.mp4` | 1747 | 318 | 10 |
+| **Total (2 videos)** | **1891** | **349** | **18** |
