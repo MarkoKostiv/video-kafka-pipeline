@@ -2,7 +2,7 @@
 
 ## 1. Short Description (Methods + Service Responsibilities)
 
-Educational end-to-end pipeline for multi-video tracking using Kafka + Triton (Python backend, YOLO + ByteTrack).
+End-to-end pipeline for multi-video tracking using Kafka + Triton (Python backend, YOLO + ByteTrack).
 
 - `frame-producer`: reads one video, samples frames, encodes JPEG, publishes to Kafka topic `raw.frames` (keyed by `video_uuid`).
 - `frame-consumer`: consumes `raw.frames`, keeps per-video order, calls Triton with sequence metadata, publishes tracked detections to `detections.tracked`, and optionally renders annotated video.
@@ -53,7 +53,6 @@ flowchart LR
 
 ### Design Choices
 
-- Uses Kafka as frame transport for learning/observability (easy to inspect end-to-end flow).
 - Uses `video_uuid` as Kafka key to preserve per-video ordering within a partition.
 - Uses Triton sequence processing so tracker state is kept per video stream.
 - Commits processed frame offsets incrementally for near-real-time progress.
@@ -62,7 +61,6 @@ flowchart LR
 
 ### Known Limitations
 
-- Not production-grade throughput architecture.
 - Base64 JPEG frames make Kafka messages large.
 - Per-frame commit strategy may still produce duplicates after crash/restart.
 - Tracker state is in Triton memory; restart can break track continuity.
