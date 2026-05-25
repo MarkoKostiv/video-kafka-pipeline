@@ -1,0 +1,32 @@
+visit_time,title,url
+2026-05-25T08:01:00Z,Google Search,https://www.google.com/search?q=kafka+redpanda
+2026-05-25T08:03:00Z,YouTube Kafka Demo,https://www.youtube.com/watch?v=demo
+2026-05-25T08:05:00Z,GitHub,https://github.com/redpanda-data/redpanda
+2026-05-25T08:07:00Z,Google Docs,https://docs.google.com/document/d/example
+2026-05-25T08:09:00Z,Stack Overflow,https://stackoverflow.com/questions/tagged/apache-kafka
+2026-05-25T08:11:00Z,OpenAI Docs,https://platform.openai.com/docs
+2026-05-25T08:13:00Z,Kaggle,https://www.kaggle.com/datasets
+2026-05-25T08:15:00Z,Medium Article,https://medium.com/topic/data-engineering
+2026-05-25T08:17:00Z,Reddit,https://www.reddit.com/r/dataengineering/
+2026-05-25T08:19:00Z,Amazon,https://www.amazon.com/
+2026-05-25T08:21:00Z,UCU,https://ucu.edu.ua/
+2026-05-25T08:23:00Z,Diia,https://diia.gov.ua/
+2026-05-25T08:25:00Z,MON,https://mon.gov.ua/
+2026-05-25T08:27:00Z,DOU,https://dou.ua/forums/
+2026-05-25T08:29:00Z,Ukrainska Pravda,https://www.pravda.com.ua/
+2026-05-25T08:31:00Z,LNU,https://lnu.edu.ua/
+2026-05-25T08:33:00Z,Wikipedia,https://www.wikipedia.org/
+2026-05-25T08:35:00Z,Python,https://www.python.org/downloads/
+2026-05-25T08:37:00Z,Apache Kafka,https://kafka.apache.org/documentation/
+2026-05-25T08:39:00Z,Mozilla,https://developer.mozilla.org/
+2026-05-25T08:41:00Z,Wikimedia,https://www.wikimedia.org/
+2026-05-25T08:43:00Z,MIT,https://web.mit.edu/
+2026-05-25T08:45:00Z,Stanford,https://www.stanford.edu/
+2026-05-25T08:47:00Z,CMU,https://www.cmu.edu/
+2026-05-25T08:49:00Z,Berkeley,https://www.berkeley.edu/
+2026-05-25T08:51:00Z,Speedtest,https://www.speedtest.net/
+2026-05-25T08:53:00Z,Cloudflare,https://www.cloudflare.net/
+2026-05-25T08:55:00Z,PHP,https://www.php.net/manual/en/
+2026-05-25T08:57:00Z,GitHub Pages,https://pages.github.io/
+2026-05-25T08:59:00Z,Chrome Settings,chrome://settings/
+2026-05-25T09:01:00Z,Local File,file:///Users/example/report.html

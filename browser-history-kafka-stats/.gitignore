@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+.mypy_cache/
+
+# Keep the sample dataset, but avoid accidentally committing private exports.
+data/browser_history.csv
+data/*private*.csv
+data/*personal*.csv
+
+# Runtime/log output
+*.log

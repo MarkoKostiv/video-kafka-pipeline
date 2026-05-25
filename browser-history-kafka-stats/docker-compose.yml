@@ -1,0 +1,77 @@
+services:
+  redpanda:
+    image: docker.redpanda.com/redpandadata/redpanda:latest
+    container_name: browser-history-redpanda
+    command:
+      - redpanda
+      - start
+      - --mode=dev-container
+      - --smp=1
+      - --memory=512M
+      - --reserve-memory=0M
+      - --overprovisioned
+      - --node-id=0
+      - --check=false
+      - --kafka-addr=internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr=internal://redpanda:9092,external://localhost:19092
+    ports:
+      - "19092:19092"
+      - "9644:9644"
+    healthcheck:
+      test: ["CMD-SHELL", "rpk -X brokers=localhost:9092 cluster health >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redpanda-init:
+    image: docker.redpanda.com/redpandadata/redpanda:latest
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    entrypoint: ["/bin/bash", "-lc"]
+    command: >
+      "rpk -X brokers=redpanda:9092 topic create browser.history.visits
+      --partitions 1
+      --replicas 1 || true;
+      rpk -X brokers=redpanda:9092 topic describe browser.history.visits"
+
+  redpanda-console:
+    image: docker.redpanda.com/redpandadata/console:latest
+    container_name: browser-history-redpanda-console
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_BROKERS: redpanda:9092
+    depends_on:
+      redpanda:
+        condition: service_healthy
+
+  stats-stream:
+    build: .
+    command: python services/stats_stream/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+      HISTORY_TOPIC: browser.history.visits
+      STATS_GROUP_ID: browser-history-stats-demo
+      STATS_AUTO_OFFSET_RESET: latest
+      TOP_N: "5"
+      PRINT_EVERY_MESSAGES: "10"
+    depends_on:
+      redpanda-init:
+        condition: service_completed_successfully
+
+  generator:
+    build: .
+    command: python services/generator/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+      HISTORY_TOPIC: browser.history.visits
+      HISTORY_CSV: ${HISTORY_CSV:-/app/data/sample_history.csv}
+      GENERATOR_STARTUP_SLEEP_SECONDS: "3"
+    volumes:
+      - ./data:/app/data:ro
+    depends_on:
+      redpanda-init:
+        condition: service_completed_successfully
+      stats-stream:
+        condition: service_started
