@@ -1,0 +1,1 @@
+"""Kafka throughput lab package."""

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "video-kafka-throughput-lab"
+version = "0.1.0"
+description = "Dummy distributed Kafka app for throughput/latency experiments on video frames"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "confluent-kafka>=2.4.0",
+  "matplotlib>=3.8.0",
+  "opencv-python-headless>=4.10.0",
+  "pandas>=2.2.0",
+  "PyYAML>=6.0.1",
+]
+
+[project.scripts]
+prepare-dataset = "kafka_lab.prepare_dataset:main"
+create-topic = "kafka_lab.topic_admin:main"
+generator-service = "kafka_lab.generator_service:main"
+consumer-service = "kafka_lab.consumer_service:main"
+aggregate-report = "kafka_lab.aggregate_report:main"
+run-experiments = "kafka_lab.run_experiments:main"
+plot-report = "kafka_lab.plot_report:main"
+
+[tool.setuptools.packages.find]
+include = ["kafka_lab*"]
