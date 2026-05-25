@@ -3,15 +3,15 @@
 Repository link: `<PUT_REPOSITORY_LINK_HERE>`
 
 Run used: `example_3.mp4` with all required 8 configurations.  
-Summary CSV: `results_example3/summary.csv`
+Summary CSV: `summary.csv`
 
 ## Throughput vs Configuration
 
-![Throughput vs configuration](../results_example3/plots/throughput_vs_config.png)
+![Throughput vs configuration](./throughput_vs_config.png)
 
 ## Max Latency vs Configuration
 
-![Max latency vs configuration](../results_example3/plots/max_latency_vs_config.png)
+![Max latency vs configuration](./max_latency_vs_config.png)
 
 ## Note
 
