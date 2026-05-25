@@ -106,17 +106,6 @@ Rows like `chrome://settings` and `file:///...` are still sent as messages, but 
 | `TOP_N` | `5` | stats-stream | Number of domains printed. |
 | `PRINT_EVERY_MESSAGES` | `25` | stats-stream | Running-statistics print interval. |
 
-## Local Tests
-
-```bash
-make test
-```
-
-or:
-
-```bash
-PYTHONPATH=. python -m unittest discover -s tests
-```
 
 ## Report
 

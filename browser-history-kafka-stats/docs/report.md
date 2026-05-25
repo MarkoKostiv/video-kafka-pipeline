@@ -2,7 +2,7 @@
 
 ## 1. Source Code Repository
 
-Repository: [github.com/MarkoKostiv/browser-history-kafka-stats](https://github.com/MarkoKostiv/browser-history-kafka-stats)
+Repository: [github.com/MarkoKostiv/browser-history-kafka-stats](https://github.com/MarkoKostiv/video-kafka-pipeline/browser-history-kafka-stats)
 
 ## 2. How To Run
 
