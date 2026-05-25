@@ -1,0 +1,9 @@
+b4e5bd98-4edf-4779-ad14-8764484b1d2a frames_collected 144
+066cf1e9-adc8-4184-a7f2-7f6c1a96bc7f frames_collected 144
+missing_a_count 0
+missing_b_count 0
+mismatch_frames 0
+run_a unique_tracks 40 mean_life 26.175 max_life 120
+run_a top_tracks [(17, 'car', 120), (18, 'person', 116), (2, 'person', 115), (19, 'person', 106), (1, 'person', 92), (25, 'person', 84), (31, 'car', 53), (20, 'car', 44), (11, 'person', 39), (33, 'person', 39), (34, 'car', 39), (4, 'person', 32)]
+run_b unique_tracks 40 mean_life 26.175 max_life 120
+run_b top_tracks [(17, 'car', 120), (18, 'person', 116), (2, 'person', 115), (19, 'person', 106), (1, 'person', 92), (25, 'person', 84), (31, 'car', 53), (20, 'car', 44), (11, 'person', 39), (33, 'person', 39), (34, 'car', 39), (4, 'person', 32)]

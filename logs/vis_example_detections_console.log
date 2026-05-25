@@ -1,0 +1,50 @@
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=0 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=1, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:1, class=person, conf=0.86, bbox=[380,294,427,395]},
+video-kafka-pipeline-detections-console-1  |   {id=2, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:2, class=person, conf=0.81, bbox=[492,265,525,333]},
+video-kafka-pipeline-detections-console-1  |   {id=3, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:3, class=person, conf=0.66, bbox=[521,235,543,289]},
+video-kafka-pipeline-detections-console-1  |   {id=4, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:4, class=person, conf=0.59, bbox=[736,206,755,257]},
+video-kafka-pipeline-detections-console-1  |   {id=5, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:5, class=person, conf=0.54, bbox=[625,217,649,267]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=1 detections=[]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=2 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=6, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:6, class=person, conf=0.52, bbox=[81,188,96,227]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=3 detections=[]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=4 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=6, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:6, class=person, conf=0.53, bbox=[81,188,96,226]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=5 detections=[]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=6 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=6, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:6, class=person, conf=0.57, bbox=[80,187,95,227]},
+video-kafka-pipeline-detections-console-1  |   {id=7, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:7, class=person, conf=0.85, bbox=[689,259,725,337]},
+video-kafka-pipeline-detections-console-1  |   {id=8, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:8, class=person, conf=0.82, bbox=[745,260,775,339]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=7 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=8, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:8, class=person, conf=0.72, bbox=[752,247,775,308]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=8 detections=[]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=9 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=9, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:9, class=car, conf=0.72, bbox=[274,183,329,213]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=10 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=9, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:9, class=car, conf=0.67, bbox=[274,183,328,212]},
+video-kafka-pipeline-detections-console-1  |   {id=10, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:10, class=car, conf=0.77, bbox=[159,170,199,196]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=11 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=6, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:6, class=person, conf=0.52, bbox=[76,187,91,226]},
+video-kafka-pipeline-detections-console-1  |   {id=7, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:7, class=person, conf=0.78, bbox=[703,278,740,360]},
+video-kafka-pipeline-detections-console-1  |   {id=11, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:11, class=person, conf=0.65, bbox=[838,238,856,293]},
+video-kafka-pipeline-detections-console-1  |   {id=9, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:9, class=car, conf=0.70, bbox=[273,182,329,212]},
+video-kafka-pipeline-detections-console-1  |   {id=10, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:10, class=car, conf=0.75, bbox=[159,170,199,195]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=12 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=6, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:6, class=person, conf=0.67, bbox=[75,187,91,226]},
+video-kafka-pipeline-detections-console-1  |   {id=9, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:9, class=car, conf=0.72, bbox=[274,182,330,212]},
+video-kafka-pipeline-detections-console-1  |   {id=10, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:10, class=car, conf=0.67, bbox=[160,170,199,195]}
+video-kafka-pipeline-detections-console-1  | ]
+video-kafka-pipeline-detections-console-1  | video_uuid=62cc5e1c-2a86-4b03-9700-9f59bf235f40 video=example.mp4 frame=13 detections=[
+video-kafka-pipeline-detections-console-1  |   {id=6, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:person:6, class=person, conf=0.66, bbox=[75,187,91,226]},
+video-kafka-pipeline-detections-console-1  |   {id=9, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:9, class=car, conf=0.75, bbox=[274,182,330,212]},
+video-kafka-pipeline-detections-console-1  |   {id=10, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:10, class=car, conf=0.67, bbox=[159,170,199,195]},
+video-kafka-pipeline-detections-console-1  |   {id=12, global_id=62cc5e1c-2a86-4b03-9700-9f59bf235f40:car:12, class=car, conf=0.70, bbox=[288,208,475,286]}
+video-kafka-pipeline-detections-console-1  | ]

@@ -1,0 +1,2 @@
+"""Detection console consumer service."""
+

@@ -1,0 +1,43 @@
+name: "yolo_tracker"
+backend: "python"
+max_batch_size: 8
+
+sequence_batching {
+  max_sequence_idle_microseconds: 30000000
+  oldest {
+    max_candidate_sequences: 1024
+  }
+}
+
+input [
+  {
+    name: "FRAME"
+    data_type: TYPE_UINT8
+    dims: [ 1 ]
+  },
+  {
+    name: "METADATA_JSON"
+    data_type: TYPE_UINT8
+    dims: [ 4096 ]
+  }
+]
+
+output [
+  {
+    name: "DETECTIONS"
+    data_type: TYPE_FP32
+    dims: [ 100, 7 ]
+  },
+  {
+    name: "DETECTION_COUNT"
+    data_type: TYPE_INT32
+    dims: [ 1 ]
+  }
+]
+
+instance_group [
+  {
+    count: 3
+    kind: KIND_CPU
+  }
+]

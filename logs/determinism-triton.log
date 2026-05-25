@@ -1,0 +1,85 @@
+video-pipeline-triton  | 
+video-pipeline-triton  | =============================
+video-pipeline-triton  | == Triton Inference Server ==
+video-pipeline-triton  | =============================
+video-pipeline-triton  | 
+video-pipeline-triton  | NVIDIA Release 24.10 (build 117855981)
+video-pipeline-triton  | Triton Server Version 2.51.0
+video-pipeline-triton  | 
+video-pipeline-triton  | Copyright (c) 2018-2024, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+video-pipeline-triton  | 
+video-pipeline-triton  | Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+video-pipeline-triton  | 
+video-pipeline-triton  | This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+video-pipeline-triton  | By pulling and using the container, you accept the terms and conditions of this license:
+video-pipeline-triton  | https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+video-pipeline-triton  | 
+video-pipeline-triton  | WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+video-pipeline-triton  |    Use the NVIDIA Container Toolkit to start this container with GPU support; see
+video-pipeline-triton  |    https://docs.nvidia.com/datacenter/cloud-native/ .
+video-pipeline-triton  | 
+video-pipeline-triton  | W0524 12:48:49.113536 1 pinned_memory_manager.cc:273] "Unable to allocate pinned system memory, pinned memory pool will not be available: CUDA driver version is insufficient for CUDA runtime version"
+video-pipeline-triton  | I0524 12:48:49.113593 1 cuda_memory_manager.cc:117] "CUDA memory pool disabled"
+video-pipeline-triton  | E0524 12:48:49.113683 1 server.cc:241] "CudaDriverHelper has not been initialized."
+video-pipeline-triton  | I0524 12:48:49.133755 1 model_lifecycle.cc:472] "loading: yolo_tracker:1"
+video-pipeline-triton  | WARNING ⚠️ user config directory '/root/.config/Ultralytics' is not writable, using '/tmp/Ultralytics'. Set YOLO_CONFIG_DIR to override.
+video-pipeline-triton  | Creating new Ultralytics Settings v0.0.6 file ✅ 
+video-pipeline-triton  | View Ultralytics Settings with 'yolo settings' or at '/tmp/Ultralytics/settings.json'
+video-pipeline-triton  | Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+video-pipeline-triton  | I0524 12:48:53.351462 1 python_be.cc:2249] "TRITONBACKEND_ModelInstanceInitialize: yolo_tracker_0_0 (CPU device 0)"
+video-pipeline-triton  | I0524 12:48:53.351502 1 python_be.cc:2249] "TRITONBACKEND_ModelInstanceInitialize: yolo_tracker_0_1 (CPU device 0)"
+video-pipeline-triton  | I0524 12:48:53.351504 1 python_be.cc:2249] "TRITONBACKEND_ModelInstanceInitialize: yolo_tracker_0_2 (CPU device 0)"
+video-pipeline-triton  | Creating new Ultralytics Settings v0.0.6 file ✅ 
+video-pipeline-triton  | View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'
+video-pipeline-triton  | Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+video-pipeline-triton  | [KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 4% ──────────── 232.0KB/6.2MB 2.3MB/s 0.1s<2.7s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 4% ──────────── 248.0KB/6.2MB 2.3MB/s 0.1s<2.7s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 4% ──────────── 232.0KB/6.2MB 2.1MB/s 0.1s<2.8s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 26% ━━━───────── 1.6/6.2MB 13.7MB/s 0.2s<0.3s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 29% ━━━───────── 1.8/6.2MB 15.2MB/s 0.2s<0.3s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 23% ━━╸───────── 1.4/6.2MB 11.9MB/s 0.2s<0.4s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 59% ━━━━━━━───── 3.7/6.2MB 20.4MB/s 0.3s<0.1s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 57% ━━━━━━╸───── 3.6/6.2MB 17.6MB/s 0.3s<0.2s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 50% ━━━━━╸────── 3.1/6.2MB 16.3MB/s 0.3s<0.2s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 65% ━━━━━━━╸──── 4.1/6.2MB 4.3MB/s 0.4s<0.5s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 71% ━━━━━━━━╸─── 4.4/6.2MB 6.0MB/s 0.4s<0.3s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 58% ━━━━━━╸───── 3.6/6.2MB 4.3MB/s 0.4s<0.6s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 100% ━━━━━━━━━━━━ 6.2MB 12.1MB/s 0.5s
+video-pipeline-triton  | [KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 98% ━━━━━━━━━━━╸ 6.1/6.2MB 20.4MB/s 0.5s<0.0s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 89% ━━━━━━━━━━╸─ 5.5/6.2MB 19.3MB/s 0.5s<0.0s[KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 100% ━━━━━━━━━━━━ 6.2MB 11.7MB/s 0.5s
+video-pipeline-triton  | INFO:triton-yolo-tracker:Loaded YOLO model=yolov8n.pt conf_threshold=0.500 classes=['bus', 'car', 'motorcycle', 'person', 'truck'] deterministic=True strict=True seed=12345 device=cpu
+video-pipeline-triton  | INFO:triton-yolo-tracker:Loaded YOLO model=yolov8n.pt conf_threshold=0.500 classes=['bus', 'car', 'motorcycle', 'person', 'truck'] deterministic=True strict=True seed=12345 device=cpu
+video-pipeline-triton  | [KDownloading https://github.com/ultralytics/assets/releases/download/v8.4.0/yolov8n.pt to 'yolov8n.pt': 100% ━━━━━━━━━━━━ 6.2MB 11.1MB/s 0.6s
+video-pipeline-triton  | INFO:triton-yolo-tracker:Loaded YOLO model=yolov8n.pt conf_threshold=0.500 classes=['bus', 'car', 'motorcycle', 'person', 'truck'] deterministic=True strict=True seed=12345 device=cpu
+video-pipeline-triton  | I0524 12:48:56.871514 1 model_lifecycle.cc:839] "successfully loaded 'yolo_tracker'"
+video-pipeline-triton  | I0524 12:48:56.871698 1 server.cc:604] 
+video-pipeline-triton  | +------------------+------+
+video-pipeline-triton  | | Repository Agent | Path |
+video-pipeline-triton  | +------------------+------+
+video-pipeline-triton  | +------------------+------+
+video-pipeline-triton  | 
+video-pipeline-triton  | I0524 12:48:56.871737 1 server.cc:631] 
+video-pipeline-triton  | +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+video-pipeline-triton  | | Backend | Path                                                  | Config                                                                                                                                                        |
+video-pipeline-triton  | +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+video-pipeline-triton  | | python  | /opt/tritonserver/backends/python/libtriton_python.so | {"cmdline":{"auto-complete-config":"true","backend-directory":"/opt/tritonserver/backends","min-compute-capability":"6.000000","default-max-batch-size":"4"}} |
+video-pipeline-triton  | +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+video-pipeline-triton  | 
+video-pipeline-triton  | I0524 12:48:56.871908 1 server.cc:674] 
+video-pipeline-triton  | +--------------+---------+--------+
+video-pipeline-triton  | | Model        | Version | Status |
+video-pipeline-triton  | +--------------+---------+--------+
+video-pipeline-triton  | | yolo_tracker | 1       | READY  |
+video-pipeline-triton  | +--------------+---------+--------+
+video-pipeline-triton  | 
+video-pipeline-triton  | I0524 12:48:56.872002 1 metrics.cc:770] "Collecting CPU metrics"
+video-pipeline-triton  | I0524 12:48:56.872116 1 tritonserver.cc:2598] 
+video-pipeline-triton  | +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+video-pipeline-triton  | | Option                           | Value                                                                                                                                                                                                           |
+video-pipeline-triton  | +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+video-pipeline-triton  | | server_id                        | triton                                                                                                                                                                                                          |
+video-pipeline-triton  | | server_version                   | 2.51.0                                                                                                                                                                                                          |
+video-pipeline-triton  | | server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data parameters statistics trace logging |
+video-pipeline-triton  | | model_repository_path[0]         | /models                                                                                                                                                                                                         |
+video-pipeline-triton  | | model_control_mode               | MODE_EXPLICIT                                                                                                                                                                                                   |
+video-pipeline-triton  | | startup_models_0                 | yolo_tracker                                                                                                                                                                                                    |
+video-pipeline-triton  | | strict_model_config              | 0                                                                                                                                                                                                               |
+video-pipeline-triton  | | model_config_name                |                                                                                                                                                                                                                 |
+video-pipeline-triton  | | rate_limit                       | OFF                                                                                                                                                                                                             |
+video-pipeline-triton  | | pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                                       |
+video-pipeline-triton  | | min_supported_compute_capability | 6.0                                                                                                                                                                                                             |
+video-pipeline-triton  | | strict_readiness                 | 1                                                                                                                                                                                                               |
+video-pipeline-triton  | | exit_timeout                     | 30                                                                                                                                                                                                              |
+video-pipeline-triton  | | cache_enabled                    | 0                                                                                                                                                                                                               |
+video-pipeline-triton  | +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+video-pipeline-triton  | 
+video-pipeline-triton  | I0524 12:48:56.874332 1 grpc_server.cc:2558] "Started GRPCInferenceService at 0.0.0.0:8001"
+video-pipeline-triton  | I0524 12:48:56.874539 1 http_server.cc:4713] "Started HTTPService at 0.0.0.0:8000"
+video-pipeline-triton  | I0524 12:48:56.930641 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"

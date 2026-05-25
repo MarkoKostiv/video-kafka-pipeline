@@ -1,0 +1,400 @@
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,158 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,176 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,194 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,213 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,232 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,249 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,268 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,286 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,306 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,324 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,343 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,361 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,378 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,398 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,417 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,436 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,455 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,473 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,492 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,511 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,531 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,551 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,570 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,588 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,606 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 157, in main
+video-kafka-pipeline-frame-consumer-1  |     process_frame(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 60, in process_frame
+video-kafka-pipeline-frame-consumer-1  |     output = triton.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'
+video-kafka-pipeline-frame-consumer-1  | 2026-05-24 12:49:54,608 ERROR frame-consumer Failed to process raw frame message; committing offset and continuing
+video-kafka-pipeline-frame-consumer-1  | Traceback (most recent call last):
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 165, in main
+video-kafka-pipeline-frame-consumer-1  |     process_end_of_stream(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/main.py", line 94, in process_end_of_stream
+video-kafka-pipeline-frame-consumer-1  |     triton.infer(
+video-kafka-pipeline-frame-consumer-1  |   File "/app/services/frame_consumer/triton_client.py", line 90, in infer
+video-kafka-pipeline-frame-consumer-1  |     result = self.client.infer(
+video-kafka-pipeline-frame-consumer-1  |              ^^^^^^^^^^^^^^^^^^
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_client.py", line 1482, in infer
+video-kafka-pipeline-frame-consumer-1  |     _raise_if_error(response)
+video-kafka-pipeline-frame-consumer-1  |   File "/usr/local/lib/python3.11/site-packages/tritonclient/http/_utils.py", line 69, in _raise_if_error
+video-kafka-pipeline-frame-consumer-1  |     raise error
+video-kafka-pipeline-frame-consumer-1  | tritonclient.utils.InferenceServerException: [400] [request id: <id_unknown>] input 'FRAME' batch size does not match other inputs for 'yolo_tracker'

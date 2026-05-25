@@ -1,0 +1,10 @@
+.git
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+data/*
+!data/.gitkeep
+model_repository/yolo_tracker/**/*.pt
+

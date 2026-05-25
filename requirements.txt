@@ -1,0 +1,4 @@
+confluent-kafka>=2.6,<3
+numpy>=1.26,<2
+opencv-python-headless>=4.10,<5
+tritonclient[grpc,http]>=2.50,<3

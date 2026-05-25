@@ -1,0 +1,1 @@
+video-kafka-pipeline-detections-console-1  | 2026-05-24 12:49:06,242 INFO detections-console Consuming topic=detections.tracked group=detections-console-group

@@ -1,0 +1,199 @@
+services:
+  kafka:
+    image: apache/kafka:3.7.0
+    container_name: video-pipeline-kafka
+    ports:
+      - "29092:29092"
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  kafka-init:
+    image: apache/kafka:3.7.0
+    depends_on:
+      kafka:
+        condition: service_healthy
+    entrypoint: ["/bin/bash"]
+    command:
+      - -lc
+      - |
+        /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --create --if-not-exists --topic raw.frames --partitions 6 --replication-factor 1
+        /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --create --if-not-exists --topic detections.tracked --partitions 6 --replication-factor 1
+        /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --describe --topic raw.frames
+        /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --describe --topic detections.tracked
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: video-pipeline-kafka-ui
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+    depends_on:
+      kafka:
+        condition: service_healthy
+
+  triton:
+    build:
+      context: .
+      target: triton
+    container_name: video-pipeline-triton
+    command: >
+      tritonserver
+      --model-repository=/models
+      --model-control-mode=explicit
+      --load-model=yolo_tracker
+    environment:
+      YOLO_MODEL_PATH: yolov8n.pt
+      YOLO_CONFIDENCE_THRESHOLD: 0.5
+      TRACKER_TYPE: bytetrack
+      DETERMINISTIC_MODE: "true"
+      DETERMINISTIC_STRICT: "true"
+      DETERMINISTIC_SEED: "12345"
+      YOLO_DEVICE: cpu
+      PYTHONHASHSEED: "0"
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    volumes:
+      - ./model_repository:/models
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+    healthcheck:
+      test: ["CMD-SHELL", "python3 -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/v2/health/ready', timeout=2)\""]
+      interval: 5s
+      timeout: 3s
+      retries: 60
+      start_period: 20s
+
+  frame-producer-example:
+    build:
+      context: .
+      target: app
+    command: python services/frame_producer/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      RAW_FRAMES_TOPIC: raw.frames
+      VIDEO_PATH: data/example.mp4
+      VIDEO_NAME: example.mp4
+      FRAME_RATE_OUT: 15
+      JPEG_QUALITY: 80
+      PRODUCER_PARTITION: "0"
+      PRODUCER_STARTUP_SLEEP_SECONDS: 20
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+      frame-consumer:
+        condition: service_started
+
+  frame-producer-alt-example:
+    build:
+      context: .
+      target: app
+    command: python services/frame_producer/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      RAW_FRAMES_TOPIC: raw.frames
+      VIDEO_PATH: data/example_3.mp4
+      VIDEO_NAME: example_3.mp4
+      FRAME_RATE_OUT: 15
+      JPEG_QUALITY: 80
+      PRODUCER_PARTITION: "1"
+      PRODUCER_STARTUP_SLEEP_SECONDS: 20
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+      frame-consumer:
+        condition: service_started
+
+  frame-consumer:
+    build:
+      context: .
+      target: app
+    command: python services/frame_consumer/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      RAW_FRAMES_TOPIC: raw.frames
+      DETECTIONS_TOPIC: detections.tracked
+      TRITON_URL: triton:8000
+      TRITON_MODEL_NAME: yolo_tracker
+      TRITON_REQUEST_TIMEOUT_SECONDS: 120
+      FRAME_CONSUMER_RENDER_ENABLED: "true"
+      FRAME_CONSUMER_RENDER_OUTPUT_DIR: /app/output
+      FRAME_CONSUMER_RENDER_OUTPUT_FPS: 15
+      FRAME_CONSUMER_RENDER_IMAGE_QUALITY: 90
+    volumes:
+      - ./output:/app/output
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+      triton:
+        condition: service_healthy
+
+  detections-console:
+    build:
+      context: .
+      target: app
+    command: python services/detections_console/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      DETECTIONS_TOPIC: detections.tracked
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+
+  stats-service:
+    build:
+      context: .
+      target: app
+    command: python services/stats_service/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      DETECTIONS_TOPIC: detections.tracked
+      STATS_GROUP_ID: stats-service-group
+      STATS_AUTO_OFFSET_RESET: earliest
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
+
+  tracking-visualizer:
+    build:
+      context: .
+      target: app
+    profiles: ["visualizer"]
+    command: python services/tracking_visualizer/main.py
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      RAW_FRAMES_TOPIC: raw.frames
+      DETECTIONS_TOPIC: detections.tracked
+      VISUALIZER_GROUP_ID: tracking-visualizer-group
+      VISUALIZER_AUTO_OFFSET_RESET: earliest
+      VISUALIZER_OUTPUT_DIR: /app/output
+      VISUALIZER_OUTPUT_FPS: 15
+    volumes:
+      - ./output:/app/output
+    depends_on:
+      kafka-init:
+        condition: service_completed_successfully
