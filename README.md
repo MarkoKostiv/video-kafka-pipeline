@@ -7,7 +7,7 @@ Educational end-to-end pipeline for multi-video tracking using Kafka + Triton (P
 - `frame-producer`: reads one video, samples frames, encodes JPEG, publishes to Kafka topic `raw.frames` (keyed by `video_uuid`).
 - `frame-consumer`: consumes `raw.frames`, keeps per-video order, calls Triton with sequence metadata, publishes tracked detections to `detections.tracked`, and optionally renders annotated video.
 - `triton (yolo_tracker)`: performs object detection + tracking and keeps tracker state per sequence.
-- `detections-console`: prints detections stream.
+- `detections-console`: prints detections stream for debugging purposes.
 - `stats-service`: computes running unique `person`/`car` counts per video and globally.
 - `kafka-ui`: topic/message inspection at `http://localhost:8080`.
 
